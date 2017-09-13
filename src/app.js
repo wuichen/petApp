@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {render} from 'react-dom';
-import {Provider} from 'redux';
+import {Provider} from 'react-redux';
 import {applyMiddleware, createStore} from 'redux';
 import logger from 'redux-logger';
 // import combined reducers
@@ -28,33 +28,33 @@ render(
 );
 
 
-store.dispatch(postBooks([
-	{
-		id: 1,
-		title: 'book title',
-		description: 'desc',
-		price: 4
-	},
-	{
-		id: 2,
-		title: 'book title 2',
-		description: 'desc2',
-		price: 5
-	}
-]))
+// store.dispatch(postBooks([
+// 	{
+// 		id: 1,
+// 		title: 'book title',
+// 		description: 'desc',
+// 		price: 4
+// 	},
+// 	{
+// 		id: 2,
+// 		title: 'book title 2',
+// 		description: 'desc2',
+// 		price: 5
+// 	}
+// ]))
 
-store.dispatch(deleteBooks(
-	{
-		id: 1
-	}
-))
+// store.dispatch(deleteBooks(
+// 	{
+// 		id: 1
+// 	}
+// ))
 
-store.dispatch(updateBooks({
-	id: 2,
-	title: 'asdfccc'
-}))
+// store.dispatch(updateBooks({
+// 	id: 2,
+// 	title: 'asdfccc'
+// }))
 
 
 
-// CART ACTIONS
-store.dispatch(addToCart([{id: 1}]))
+// // CART ACTIONS
+// store.dispatch(addToCart([{id: 1}]))
